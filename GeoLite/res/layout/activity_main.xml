@@ -1,0 +1,50 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    
+    android:background="@drawable/back">
+
+    <ImageView 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:scaleType="centerCrop"
+    android:layout_marginTop="10dp"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    
+    android:background="@drawable/repeat"
+    />
+    
+        <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Proceeding further will generate a visibility pin and then you'll be asked 'weather you want to reverse your password or not and 'weather you want to encrypt your password or not?'
+ If you opt to encrypt then you'll be asked for a difference
+ ex:- Suppose ur password is 654H and you opted for both reverse and encrypt and set the diff as 3. Then your password will be K789
+ If you opt only reverse then it'll become H456
+ If you only to encrypt the it'll be 987K
+ And if did'nt opt any then your original password will be saved
+ This is a one time setup so please remember your info" 
+        android:textColor="#FFFFFF"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:layout_marginTop="5dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginBottom="10dp"/>
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="26dp"
+        android:onClick="onPin"
+        android:paddingTop="10dp"
+        android:text="Generate visibility Pin" />
+
+</RelativeLayout>

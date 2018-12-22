@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.alarmnotify"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+   <uses-sdk android:minSdkVersion="10" />
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.VIBRATE" />
+    
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.alarmnotify.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <receiver android:name="com.example.alarmnotify.AlarmReceiver" >
+        </receiver>
+
+        <service
+            android:name="com.example.alarmnotify.NotificationService"
+            android:enabled="true" />
+        
+        <activity
+            android:name="com.example.alarmnotify.NotifyViewActivity"
+            android:label="@string/title_activity_notify_view" >
+        </activity>
+    </application>
+
+</manifest>

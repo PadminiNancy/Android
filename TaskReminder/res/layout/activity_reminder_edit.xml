@@ -1,0 +1,69 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/e">
+    
+    <LinearLayout 
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="@string/title" 
+                  android:textColor="#ff3366"/> 
+                  
+        <EditText android:id="@+id/title"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content" 
+                  android:textColor="#333366"/> 
+                  
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="@string/body" 
+                  android:textColor="#ff3366"/> 
+                  
+        <EditText android:id="@+id/body"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:minLines="5"
+                  android:scrollbars="vertical"
+                  android:gravity="top" 
+                  android:textColor="#333366"/> 
+                  
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="@string/date" 
+                  android:textColor="#ff3366"/> 
+                  
+        <Button android:id="@+id/reminder_date"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:onClick="onDate"
+                android:textColor="#333366"/> 
+                
+       <TextView android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="@string/time" 
+                 android:textColor="#ff3366"/>
+       
+       <Button android:id="@+id/reminder_time"
+               android:layout_height="wrap_content"
+               android:layout_width="wrap_content" 
+               android:onClick="onTime"
+               android:textColor="#333366"/> 
+
+       <Button android:id="@+id/confirm"
+               android:text="@string/confirm"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content" 
+               android:onClick="onConfirm"
+               android:textColor="#993333"/>
+        
+        
+    </LinearLayout>
+
+    
+
+</ScrollView>
